@@ -21,7 +21,7 @@ export default function BioInfoScreen() {
       <View style={styles.mainContent}>
         <View style={styles.logoContainer}>
           <Image 
-            source={require('@/assets/images/icon.png')} 
+            source={require('@/assets/images/PATHMATE.png')} 
             style={styles.logoImage}
             resizeMode="contain"
           />
@@ -107,7 +107,7 @@ export default function BioInfoScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#ede4d4',
+    backgroundColor: '#f2efe8',
   },
   mainContent: {
     paddingHorizontal: 30,

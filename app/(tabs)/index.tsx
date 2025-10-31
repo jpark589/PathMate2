@@ -8,7 +8,7 @@ export default function HomeScreen() {
       <View style={styles.mainContent}>
         <View style={styles.logoContainer}>
           <Image 
-            source={require('../../assets/images/icon.png')} 
+            source={require('../../assets/images/PATHMATE.png')} 
             style={styles.logoImage}
             resizeMode="contain"
           />
@@ -47,21 +47,22 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#ede4d4',
+    backgroundColor: '#f2efe8',
   },
   mainContent: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#ede4d4',
-    paddingHorizontal: 20,
+    backgroundColor: '#f2efe8',
+    paddingHorizontal: 25,
   },
   logoContainer: {
     alignItems: 'center',
   },
   logoImage: {
-    width: 250,
-    height: 250,
+    width: 210,
+    height: 300,
+    marginTop: -50
   },
   taglineText: {
     fontSize: 15,
