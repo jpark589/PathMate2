@@ -28,15 +28,18 @@ export default function HomeScreen() {
           placeholderTextColor="gray"
         />
 
-        <TouchableOpacity style={styles.loginButton}>
-          <Text style={styles.loginButtonText}>Log In</Text>
+        <TouchableOpacity 
+          style={styles.loginButton}
+          onPress={() => router.push('/bioInfo')}
+        >
+          <Text style={styles.loginButtonText}>SignUp</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.bottomTextContainer} onPress={() => router.push('./signUp')}>
-          <Text style={styles.bottomTextLink}>
-            Don't have an account? Sign up!
+        <View style={styles.bottomTextContainer}>
+          <Text style={styles.bottomText}>
+            By pressing continue, you agree to our Terms of Service and Privacy Policy.
           </Text>
-        </TouchableOpacity>
+        </View>
         
       </View>
     </View>
@@ -101,17 +104,15 @@ const styles = StyleSheet.create({
     marginTop: 20,
     alignItems: 'center',
     justifyContent: 'center',
-    fontSize: 14,
-    color: '#56382d',
-    fontFamily: 'Lato',
-    fontWeight: '500',
-    textDecorationLine: 'underline',
+    marginLeft: 60,
+    marginRight: 60,
   },
-  bottomTextLink: {
+  bottomText: {
     color: '#56382d',
     fontFamily: 'Lato',
     fontWeight: '500',
-    textDecorationLine: 'underline',
+    textAlign: 'center',
+    fontSize: 12,
   },
 });
 
