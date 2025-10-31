@@ -1,4 +1,4 @@
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 
 export default function HomeScreen() {
   return (
@@ -12,13 +12,31 @@ export default function HomeScreen() {
             resizeMode="contain"
           />
         </View>
+
+        <Text style={styles.taglineText}>Right Person, Right Place, Right Now</Text>
+
+        <TextInput 
+          placeholder="Full Name" 
+          style={styles.textInput} 
+          placeholderTextColor="gray"
+        />
         
-        <Text style={styles.subtitle}>Sign in to continue</Text>
+        <TextInput 
+          placeholder="Phone Number" 
+          style={styles.textInput} 
+          placeholderTextColor="gray"
+        />
+
+        <TouchableOpacity style={styles.loginButton}>
+          <Text style={styles.loginButtonText}>Log In</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.bottomTextContainer}>
+          <Text style={styles.bottomTextLink}>
+            Don't have an account? Sign up!
+          </Text>
+        </TouchableOpacity>
         
-        <View style={styles.loginSection}>
-          <Text style={styles.bottomText}>Login Form Goes Here</Text>
-          <Text style={styles.bottomSubtext}>Input fields and buttons will be added here</Text>
-        </View>
       </View>
     </View>
   );
@@ -37,51 +55,62 @@ const styles = StyleSheet.create({
     backgroundColor: '#ede4d4',
     paddingHorizontal: 20,
   },
-  loginSection: {
-    marginTop: 30,
-    alignItems: 'center',
-  },
   logoContainer: {
     alignItems: 'center',
-    marginBottom: 30,
   },
   logoImage: {
     width: 250,
     height: 250,
   },
-  fallbackText: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    color: '#333',
+  taglineText: {
+    fontSize: 15,
+    color: '#56382d',
+    marginTop: -50,
+    marginBottom: 100,
+    fontFamily: 'Lato',
+    fontWeight: '500',
+  },
+  textInput: {
+    width: '100%',
+    height: 45,
+    borderColor: 'lightgray',
+    borderWidth: 1,
+    marginBottom: 10,
+    paddingHorizontal: 10,
+    borderRadius: 8,
+    fontFamily: 'Lato',
+    backgroundColor: 'white',
+  },
+  loginButton: {
+    width: '100%',
+    height: 45,
+    backgroundColor: '#56382d',
+    borderRadius: 8,
+    justifyContent: 'center',
+    alignItems: 'center',
     marginTop: 10,
   },
-  logoLine1: {
-    fontSize: 36,
-    fontWeight: '900',
-    color: '#333',
-    letterSpacing: 3,
-  },
-  logoLine2: {
-    fontSize: 36,
-    fontWeight: '900',
-    color: '#333',
-    letterSpacing: 3,
-  },
-  subtitle: {
+  loginButtonText: {
+    color: 'white',
     fontSize: 16,
-    color: '#666',
-    textAlign: 'center',
+    fontWeight: '500',
+    fontFamily: 'Lato',
   },
-  bottomText: {
-    fontSize: 20,
-    fontWeight: '600',
-    color: '#333',
-    marginBottom: 8,
-  },
-  bottomSubtext: {
+  bottomTextContainer: {
+    marginTop: 20,
+    alignItems: 'center',
+    justifyContent: 'center',
     fontSize: 14,
-    color: '#888',
-    textAlign: 'center',
+    color: '#56382d',
+    fontFamily: 'Lato',
+    fontWeight: '500',
+    textDecorationLine: 'underline',
+  },
+  bottomTextLink: {
+    color: '#56382d',
+    fontFamily: 'Lato',
+    fontWeight: '500',
+    textDecorationLine: 'underline',
   },
 });
 
